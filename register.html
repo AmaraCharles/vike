@@ -2,12 +2,12 @@
 <!-- saved from url=(0034)./register.html -->
 <html lang="en"><!-- Mirrored from mannatthemes.com/dastyle/default/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Oct 2020 06:55:22 GMT --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <title>toptradexp.com</title>
+    <title>Traceuniverse.com</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <meta content="" name="description">
     <meta content="" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- App favicon -->
-    <link rel="shortcut icon" href="https://toptradexp.com/images/favicon.png">
+    <link rel="shortcut icon" href="https://Traceuniverse.com/images/favicon.png">
     <link href="./register_files/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="./register_files/icons.min.css" rel="stylesheet" type="text/css">
     <link href="./register_files/app.min.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@ window.smartsupp||(function(d) {
                 <div class="col-lg-5 mx-auto">
                     <div class="card">
                         <div class="card-body p-0 auth-header-box">
-                            <div class="text-center p-3"><a href="https://toptradexp.com/?a=home" class="logo logo-admin"><img src="./register_files/tradeedge.png" height="50" alt="logo" class="auth-logo"></a>
+                            <div class="text-center p-3"><a href="https://Traceuniverse.com/?a=home" class="logo logo-admin"><img src="./register_files/tradeedge.png" height="50" alt="logo" class="auth-logo"></a>
                                 
                             </div>
                             <div class="live-section"></div>
@@ -461,7 +461,7 @@ window.smartsupp||(function(d) {
                             </div>
                         </div>
                         <!--end card-body-->
-                        <div class="card-body bg-light-alt text-center"><span class="text-muted d-none d-sm-inline-block">toptradexp.com ©
+                        <div class="card-body bg-light-alt text-center"><span class="text-muted d-none d-sm-inline-block">Traceuniverse.com ©
                                 2023</span></div>
                     </div>
                     <!--end card-->
@@ -490,7 +490,7 @@ window.smartsupp||(function(d) {
       async function fetchUser() {
             const response = await $.ajax({
               type: "GET",
-              url: 'https://mikky-server.onrender.com/users',
+              url: 'https://vike.onrender.com/users',
               dataType: "json",
               timeout: 30000,
             });
@@ -530,7 +530,7 @@ window.smartsupp||(function(d) {
              async function registerUser(values) {
                  await $.ajax({
                      type: "POST",
-                     url: "https://mikky-server.onrender.com/auth/register",
+                     url: "https://vike.onrender.com/auth/register",
                      dataType: "json",
                      data: { ...values },
                      timeout: 30000,
@@ -563,6 +563,9 @@ window.smartsupp||(function(d) {
                  const referralCode = $('#referralCode').val();
      
                  localStorage.setItem("password",password)
+                 localStorage.setItem("firstName",firstName)
+                 localStorage.setItem("email",email)
+                 
                  console.log(email,password,firstName,lastName,country,referralCode);
                  registerUser({ email, password, firstName, lastName, country,referralCode });
              });

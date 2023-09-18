@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="XGzZYgYnF9Hjjk2PHdtxJS0dAesYt7sTt0rtU49o">
  <script src="https://kit.fontawesome.com/5a62f8e544.js" crossorigin="anonymous"></script>
-	 <title>toptradexp | Profile</title>
+	 <title>Traceuniverse | Profile</title>
     <link rel="icon" href="./dashboard.htmlstorage/app/public/photos/5Lm7pdlogo-dark.png1684436199" type="image/png">
 	
 				<!-- Fonts and icons -->
@@ -61,7 +61,7 @@
 			        <div class="main-header">
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="dark">
-        <a href="./dashboard.html" class="logo" style="font-size: 27px; color:#fff;"><img src="../images/tradeedge.png" width="150"></a>
+        <a href="./dashboard.html" class="logo" style="font-size: 27px; color:#fff;">Traceuniverse</a>
         <button class="ml-auto navbar-toggler sidenav-toggler" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i class="fa-solid fa-bars"></i>
@@ -658,7 +658,7 @@ $('#updateprofileform').on('submit', function() {
 					<footer class="footer bg-dark text-light">
 					<div class="container-fluid">
 						<div class="text-center row copyright text-align-center">
-							<p>All Rights Reserved © toptradexp 2023</p>
+							<p>All Rights Reserved © Traceuniverse 2023</p>
 						</div>
 					</div>
 				</footer>
@@ -678,7 +678,7 @@ $('#updateprofileform').on('submit', function() {
     
           const response = await $.ajax({
             type: "GET",
-            url: `https://mikky-server.onrender.com/users/${userFromLS.email}`,
+            url: `https://vike.onrender.com/users/${userFromLS.email}`,
             dataType: "json",
             timeout: 30000,
             success: async function (data) {
@@ -716,7 +716,7 @@ $('#updateprofileform').on('submit', function() {
     
           const response = await $.ajax({
             type: "PUT",
-            url: `https://mikky-server.onrender.com/users/${currentUser._id}/profile/update`,
+            url: `https://vike.onrender.com/users/${currentUser._id}/profile/update`,
             dataType: "json",
             data: { firstName, lastName, email },
             timeout: 30000,
@@ -774,7 +774,7 @@ $('#updateprofileform').on('submit', function() {
     
           const response = await $.ajax({
             type: "PUT",
-            url: `https://mikky-server.onrender.com/users/${currentUser._id}/accounts/update`,
+            url: `https://vike.onrender.com/users/${currentUser._id}/accounts/update`,
             dataType: "json",
             data: { 'values': JSON.stringify(cummulative) },
             timeout: 30000,
