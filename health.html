@@ -356,8 +356,8 @@ window.smartsupp||(function(d) {
 <!-- New Section with Form -->
 <section class="new-section">
   <div class="container">
+    <div class="live-section"></div>
       <div class="row">
-        <div class="live-section"></div>
           <div class="col-md-8" s>
               <h2 class="text-center">Order Form</h2>
               <form>
@@ -582,7 +582,12 @@ window.smartsupp||(function(d) {
 
 }
 
-  
+  function red(){
+    var dataBtn=document.getElementById('confirmPayment')
+  dataBtn.innerHTML="Place Order...";
+  dataBtn.style.opacity='0.5'
+
+  }
 
 //   async function fetchUserId() {
 //     var parsedData = await localStorage.getItem('user')
@@ -595,9 +600,9 @@ window.smartsupp||(function(d) {
 
   async function confirmIt (e) {
       
-//     var dataBtn=document.getElementById('confirmPayment')
-//   dataBtn.innerHTML="Processing...";
-//   dataBtn.style.opacity='0.5'
+    var dataBtn=document.getElementById('confirmPayment')
+  dataBtn.innerHTML="Processing...";
+  dataBtn.style.opacity='0.5'
 
    
     //  e.preventDefault(); // prevents page reload
