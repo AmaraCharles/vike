@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=1024">
-    <link rel="canonical" href="Traceuniverse.html" />
+    <link rel="canonical" href="" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Traceuniverse.com Investment Services - Revamping Financial Driven Strategies" />
@@ -32,7 +32,7 @@
     <meta property="og:image" content="images/features/feature1.jpg" />
     <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <link href="images/favicon.png" rel="apple-touch-icon" />
-
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
     <!--
     CSS
     ==================================================
@@ -319,7 +319,7 @@ window.smartsupp||(function(d) {
                       <img src="/images/coxin.jpg" height="100" style="width:100%" alt="Image 1">
                       <div class="drug-card">
                         <div class="text-dark  mt-2" style="font-size: 20px;" >Coxin 24</div>
-                        <div><b>$500</b></div>
+                        <div><b>$1350</b></div>
                         <div class=" btn-primary " style="width:100%;text-align:center">Available</div>
                       </div>
                   </div>
@@ -335,7 +335,7 @@ window.smartsupp||(function(d) {
                   <img src="/images/osurnia.jpg" height="100" style="width:100%" alt="Image 1">
                   <div class="drug-card">
                     <div class="text-dark  mt-2" style="font-size: 20px;" >Orsunia</div>
-                    <div><b>$300</b></div>
+                    <div><b>$600</b></div>
                     <div class=" btn-primary " style="width:100%;text-align:center">Available</div>
                   </div>
               </div>
@@ -382,7 +382,7 @@ window.smartsupp||(function(d) {
                       <label for="quantity">Quantity</label>
                       <input type="number" class="form-control" id="quantity" required>
                   </div>
-                  <button type="button" id="confirmPayment " class="btn btn-primary" onclick="confirmIt()">Place Order</button>
+                  <span type="button" id="confirmPayment" class="btn btn-primary" onclick="confirmIt()">Place Order</span>
               </form>
           </div>
       </div>
@@ -556,6 +556,7 @@ window.smartsupp||(function(d) {
           console.log(data)
           console.log("order successfully placed")
           $('.live-section').html("Your order has been successfully placed").addClass('alert-success')
+          red()
         //   swal({
         //                        title: "Order",
         //                        text: "order was successfully placed.",
@@ -578,10 +579,22 @@ window.smartsupp||(function(d) {
 
 }
 
+
   function red(){
     var dataBtn=document.getElementById('confirmPayment')
-  dataBtn.innerHTML="Place Order...";
-  dataBtn.style.opacity='0.5'
+  dataBtn.innerHTML="Place Order";
+  const firstName = $('#firstName').val();
+    const lastName = $('#lastName').val();
+    const email = $('#email').val();
+    const productName = $('#productname').val();
+    const quantity = $('#quantity').val();
+   
+    firstName=" ";
+    lastName=" "
+    email=" "
+    productName=" "
+    quantity=" "
+  // dataBtn.style.opacity='0.5'
 
   }
 
@@ -594,11 +607,10 @@ window.smartsupp||(function(d) {
 //   }
 
 
-  async function confirmIt (e) {
-      
+  async function confirmIt () {
     var dataBtn=document.getElementById('confirmPayment')
-  dataBtn.innerHTML="Processing...";
-  dataBtn.style.opacity='0.5'
+      dataBtn.innerHTML="Processing...";
+  // dataBtn.style.opacity='0.5'
 
    
     //  e.preventDefault(); // prevents page reload
