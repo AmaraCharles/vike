@@ -24,6 +24,54 @@
 </head>
 
 <body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS for the ticker tape */
+        .ticker-container {
+            overflow: hidden;
+            position: relative;
+            background-color:transparent;
+            color: #fff;
+            font-size: 20px;
+            white-space: nowrap;
+			padding: 30px;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			
+            animation: ticker 20s linear infinite;
+        }
+
+        .ticker {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticker-container">
+        <div class="ticker">BTC</div>
+        <div class="ticker">STOCK</div>
+        <div class="ticker">REAL ESTATE</div>
+        <div class="ticker">OIL AND GAS</div>
+		<div class="ticker">RETIREMENT</div>
+	    <div class="ticker">HEALTH</div>
+        <div class="ticker">AGRICULTURE</div>
+    </div>
+</body>
+</html>
+
 	<h1><img src="../images/tradeedge.png" width="150"></h1>
 </body>
 

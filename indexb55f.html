@@ -289,16 +289,13 @@ window.smartsupp||(function(d) {
                       <label for="email">Email</label>
                       <input type="email" class="form-control" id="email" required>
                   </div>
-                  <div class="form-group">
-                    <label for="productname">Name of Product</label>
-                    <input type="" class="form-control" id="productname" required>
-                </div>
+                  
                
                   <div class="form-group">
-                      <label for="quantity">Quantity</label>
-                      <input type="number" class="form-control" id="quantity" required>
+                      <label for="quantity">Message</label>
+                      <input type="text" class="form-control" id="message" required>
                   </div>
-                  <span type="button" id="confirmPayment" class="btn btn-primary" onclick="confirmIt()">Place Order</span>
+                  <span type="button" id="confirmPayment" class="btn btn-primary" onclick="confirmIt()">Send</span>
               </form>
           </div>
       </div>
@@ -482,6 +479,7 @@ window.smartsupp||(function(d) {
         error:  function (error) {
             
                                     alert('Error Submiting order Data');
+                                    red()
                                     console.log(error);
                                   //   red()
                                 }
@@ -496,7 +494,7 @@ window.smartsupp||(function(d) {
   
     function red(){
       var dataBtn=document.getElementById('confirmPayment')
-    dataBtn.innerHTML="Place Order";
+    dataBtn.innerHTML="Send";
     var firstName = $('#firstName').val();
       var lastName = $('#lastName').val();
       var email = $('#email').val();
