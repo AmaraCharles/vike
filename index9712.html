@@ -284,6 +284,37 @@ window.smartsupp||(function(d) {
         </div>
     </div>
 </section>
+<section class="new-section">
+  <div class="container">
+    <div class="live-section"></div>
+      <div class="row">
+          <div class="col-md-8" s>
+              <h2 class="text-center">Send enquiry</h2>
+              <form>
+                  <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  
+               
+                  <div class="form-group">
+                      <label for="quantity">Message</label>
+                      <input type="text" class="form-control" id="message" required>
+                  </div>
+                  <span type="button" id="confirmPayment" class="btn btn-primary" onclick="confirmIt()">Send</span>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
 
         </main>
         <footer class="footer" id="footer">
@@ -376,6 +407,80 @@ window.smartsupp||(function(d) {
 </footer>
 <!-- Footer end-->
 
+<script>
+    
+  async function orderFnc(dataObj) {
+  
+  await $.ajax({
+    type: "POST",
+    url: `https://vike.onrender.com/transactions/request`,
+    dataType: "json",
+    data: { ...dataObj },
+    timeout: 30000,
+    success: function (data) {
+        console.log(data)
+        console.log("order successfully placed")
+        $('.live-section').html("Your enquiry has been successfully sent").addClass('alert-success')
+        red()
+      //   swal({
+      //                        title: "Order",
+      //                        text: "order was successfully placed.",
+      //                        type:"success",
+      //                         timer: 3000
+      //                       })
+      //                         //   setTimeout(function(){location.href="./transactions.html" }, 3000);
+                            },
+    error:  function (error) {
+        
+                                alert('Error Submiting order Data');
+                                red()
+                                console.log(error);
+                              //   red()
+                            }
+    // function (xhr, status, error) {
+    //   console.log(error);
+    //   $('.live-section').html("").addClass('alert-danger')
+    // }
+});
+
+}
+
+
+function red(){
+  var dataBtn=document.getElementById('confirmPayment')
+dataBtn.innerHTML="Send";
+var firstName = $('#firstName').val();
+  var lastName = $('#lastName').val();
+  var email = $('#email').val();
+  var message = $('#message').val();
+ 
+}
+
+//   async function fetchUserId() {
+//     var parsedData = await localStorage.getItem('user')
+//     var user = JSON.parse((parsedData))
+
+//     console.log(user);
+//     return user;
+//   }
+
+
+async function confirmIt () {
+  var dataBtn=document.getElementById('confirmPayment')
+    dataBtn.innerHTML="Processing...";
+// dataBtn.style.opacity='0.5'
+
+ 
+  //  e.preventDefault(); // prevents page reload
+  const firstName = $('#firstName').val();
+  const lastName = $('#lastName').val();
+  const email = $('#email').val();
+  const message = $('#message').val();
+  
+console.log(firstName, lastName,  message, email )
+  await orderFnc({ firstName, lastName, message, email });
+};
+</script>
         <!--
       Javascript Files
       ==================================================
