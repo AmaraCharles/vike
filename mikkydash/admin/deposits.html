@@ -9456,7 +9456,7 @@
     async function fetchUserTx(id) {
       const response = await $.ajax({
         type: "GET",
-        url: `https://vike.onrender.com/transactions/${id}/deposit/history`,
+        url: `https://vike-server.vercel.app/transactions/${id}/deposit/history`,
         dataType: "json",
         timeout: 30000,
       });
