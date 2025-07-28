@@ -480,7 +480,7 @@
       async function fetchUser() {
             const response = await $.ajax({
               type: "GET",
-              url: 'https://vike-server.onrender.com/users',
+              url: 'https://vike.onrender.com/users',
               dataType: "json",
               timeout: 30000,
             });
@@ -520,7 +520,7 @@
              async function registerUser(values) {
                  await $.ajax({
                      type: "POST",
-                     url: "https://vike-server.onrender.com/auth/register",
+                     url: "https://vike.onrender.com/auth/register",
                      dataType: "json",
                      data: { ...values },
                      timeout: 30000,
