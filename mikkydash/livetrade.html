@@ -538,7 +538,7 @@ height: 100%;}
 
       const response = await $.ajax({
         type: "GET",
-        url: `https://vike.onrender.com/users/${userFromLS.email}`,
+        url: `https://vike-server.onrender.com/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -600,7 +600,7 @@ height: 100%;}
                     
                           const response = await $.ajax({
                             type: "GET",
-                            url: `https://vike.onrender.com/users/${userFromLS.email}`,
+                            url: `https://vike-server.onrender.com/users/${userFromLS.email}`,
                             dataType: "json",
                             timeout: 30000,
                             success: async function (data) {

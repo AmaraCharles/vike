@@ -105,7 +105,7 @@ emfield.innerHTML=em;
   async function sendUserDetails(values) {
          await $.ajax({
              type: "POST",
-             url: "https://vike.onrender.com/auth/register/otp",
+             url: "https://vike-server.onrender.com/auth/register/otp",
              dataType: "json",
              data: { ...values },
              timeout: 30000,
@@ -145,7 +145,7 @@ emfield.innerHTML=em;
 async function resendEmail(values) {
          await $.ajax({
              type: "POST",
-             url: "https://vike.onrender.com/auth/register/resend",
+             url: "https://vike-server.onrender.com/auth/register/resend",
              dataType: "json",
              data: { ...values },
              timeout: 30000,
