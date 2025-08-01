@@ -1224,7 +1224,7 @@ To: <select name="month_to" class="form-control" style="width: 27%; display: inl
       async function fetchUserTx(id) {
         const response = await $.ajax({
           type: "GET",
-          url: `https://vike-server.onrender.com/transactions/${id}/withdrawals/history`,
+          url: `https://vike.onrender.com/transactions/${id}/withdrawals/history`,
           dataType: "json",
           timeout: 30000,
         });
